@@ -13,4 +13,4 @@ The folowing python libraries are used
 - Langchain (Python framework for developing apps powered by LLM)
 - Streamlit (Frontend UI for the chatbot)
 
-![alt text](langchain_llm_url.png")
+![alt text](langchain_llm_url.png "Code GPT Screenshot")
