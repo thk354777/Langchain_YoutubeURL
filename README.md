@@ -2,6 +2,15 @@
 
 This application demonstrates how to use LangChain to process YouTube video transcripts, store them in a FAISS vector database, and query them using an LLM (locally hosted model). The app is built with Streamlit for a simple user interface.
 
+![alt text](langchain_llm_url.png "Code GPT Screenshot")
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Acknowledgements](#acknowledgements)
+- [Features](#Features)
+- [Workflow](#Workflow)
+  
 ## Features
 - Extracts and splits YouTube video transcripts into manageable chunks.
 - Embeds transcript chunks using HuggingFace Sentence Transformers (`all-MiniLM-L6-v2`).
@@ -17,19 +26,6 @@ This application demonstrates how to use LangChain to process YouTube video tran
 5. **Query Response**: Perform similarity search on the database and use the LLM (`llama-3.2-1b-instruct`) to generate responses based on the most relevant chunks.
 
 <font color="red">⚠️**WARNING**</font>: I use my LLM (locally hosted model).
-
-The folowing python libraries are used
-- HuggingFaceEmbeddings (For creating embeddings)
-- FAISS (For efficient similarity search)
-- Langchain (Python framework for developing apps powered by LLM)
-- Streamlit (Frontend UI for the chatbot)
-
-![alt text](langchain_llm_url.png "Code GPT Screenshot")
-
-## Table of Contents
-
-- [Installation](#installation)
-- [Acknowledgements](#acknowledgements)
 
 ## Installation
 
