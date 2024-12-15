@@ -1,6 +1,6 @@
-# LangChain YouTube Transcript Question Answering
+# LangChain YouTube Transcript Question Answering (RAG Framework)
 
-This application demonstrates how to use LangChain to process YouTube video transcripts, store them in a FAISS vector database, and query them using an LLM (locally hosted model). The app is built with Streamlit for a simple user interface.
+This application demonstrates how to use LangChain in a Retrieval-Augmented Generation (RAG) framework to process YouTube video transcripts, store them in a FAISS vector database, and query them using a locally hosted LLM. The app is built with Streamlit for a simple user interface.
 
 ![alt text](langchain_llm_url.png "Code GPT Screenshot")
 
@@ -12,18 +12,18 @@ This application demonstrates how to use LangChain to process YouTube video tran
 - [Workflow](#Workflow)
   
 ## Features
-- Extracts and splits YouTube video transcripts into manageable chunks.
-- Embeds transcript chunks using HuggingFace Sentence Transformers (`all-MiniLM-L6-v2`).
-- Stores embeddings in a FAISS vector database for similarity search.
-- Uses a local LLM for answering user queries about the video content.
-- Supports Streamlit for easy input and output interaction.
+- Transcript Processing: Extracts and splits YouTube video transcripts into manageable chunks.
+- Embedding Creation: Embeds transcript chunks using HuggingFace Sentence Transformers (all-MiniLM-L6-v2).
+- Vector Store: Stores embeddings in a FAISS vector database for similarity search.
+- Query Response with RAG: Retrieves the most relevant transcript chunks and uses a local LLM to answer user queries based on these chunks.
+- Interactive UI: Built with Streamlit for easy input and output interaction.
 
 ## Workflow
 1. **Extract Transcript**: Load the YouTube video's transcript using `YoutubeLoader`.
 2. **Text Splitting**: Split the transcript into smaller chunks using `RecursiveCharacterTextSplitter` to handle long documents.
 3. **Embedding**: Embed the text chunks with `HuggingFaceEmbeddings`.
 4. **Vector Store**: Save the embeddings in a FAISS vector database.
-5. **Query Response**: Perform similarity search on the database and use the LLM (`llama-3.2-1b-instruct`) to generate responses based on the most relevant chunks.
+5. **RAG Query Response**: Retrieve the top k relevant chunks and use the LLM (`llama-3.2-1b-instruct`) to generate answers based on these chunks.
 
 <font color="red">⚠️**WARNING**</font>: I use my LLM (locally hosted model).
 
